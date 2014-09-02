@@ -7,7 +7,23 @@
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="style.css">
     </head>
-    <body ng-app="coNamedToggle">
+    <body ng-app="coToggle">
+
+        <div>
+        Defaults: <input toggle-switch type="checkbox" />
+        </div>
+        
+        <div>
+            Long label support: <input toggle-switch type="checkbox" on-label="'On supporting long labels'" off-label="'Off'" />
+        </div>
+        <div style="font-size: 3em;">
+            Font size: <input toggle-switch type="checkbox" on-label="'On'" off-label="'Off'" />
+        </div>
+        <div>
+            Alternative values: <input toggle-switch type="checkbox" model="value" true-value="'Wooo!'" false-value="'Booo!'" />
+            The value is: {{value}}
+        </div>
+
         <script src="../bower_components/angular/angular.js"></script>
         <script src="../angular-named-toggle.js"></script>
     </body>

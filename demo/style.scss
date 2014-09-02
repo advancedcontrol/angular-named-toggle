@@ -1,1 +1,6 @@
 @import "../angular-named-toggle.scss";
+@include named-toggle();
+
+body > div {
+    margin-top: 1em;
+}
