@@ -1,6 +1,9 @@
 @import "../angular-named-toggle.scss";
 @include named-toggle();
 
+@import "../ios-toggle.scss";
+@include ios-toggle();
+
 body > div {
     margin-top: 1em;
 }

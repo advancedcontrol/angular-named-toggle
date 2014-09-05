@@ -1,6 +1,13 @@
 @import "compass";
 
-@mixin named-toggle($active:#53d76a, $inactive:#eee, $knob:#fff, $border:#d3d3d3, $activeText: #FFF, $inactiveText: #000) {
+@mixin named-toggle(
+    $active:       #53d76a,
+    $inactive:     #eee,
+    $knob:         #fff,
+    $border:       #d3d3d3,
+    $activeText:   #FFF,
+    $inactiveText: #000
+) {
     .co-toggle {
         display: inline-block;
         overflow: hidden;
@@ -50,7 +57,7 @@
             // off by default
             left: -50%;
 
-            &.active {
+            &.coActive {
                 left: 0%;
             }
 
@@ -92,7 +99,7 @@
                 text-align: center;
             }
 
-            &.swtich-left,
+            &.switch-left,
             &.switch-right {
                 z-index: 1;
             }

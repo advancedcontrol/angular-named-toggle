@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="style.css">
     </head>
-    <body ng-app="coToggle">
+    <body ng-app="ng">
 
         <div>
         Defaults: <input toggle-switch type="checkbox" />
@@ -21,6 +21,11 @@
         </div>
         <div>
             Alternative values: <input toggle-switch type="checkbox" model="value" true-value="'Wooo!'" false-value="'Booo!'" />
+            The value is: {{value}}
+        </div>
+
+        <div>
+            Or an iOS style switch: <div ios-toggle model="value" true-value="'Wooo!'" false-value="'Booo!'" /></div>
             The value is: {{value}}
         </div>
 
