@@ -22,7 +22,6 @@
     .directive('toggleSwitch', function () {
         return {
             restrict: 'EA',
-            replace: true,
             scope: {
                 model: '=?',
                 disabled: '=?',
@@ -34,7 +33,7 @@
                 onChange: '&'
             },
             template:
-                '<div class="co-toggle" ng-click="toggle()" ng-class="{ disabled: disabled }">' +
+                '<div ng-click="toggle()" ng-class="{ disabled: disabled }">' +
                     '<div class="switch-animate" ng-class="{coActive: model === trueValue}">' +
                         '<span class="switch-left">{{onLabel}}</span>' +
                         '<span class="knob">{{knobLabel}}</span>' +
@@ -43,12 +42,15 @@
                     '<span class="switch-min">{{largeText}}</span>' +
                 '</div>',
             controller: toggle,
-            link: function(scope) {
+            link: function(scope, $element) {
                 scope.onLabel = scope.onLabel || "On";
                 scope.offLabel = scope.offLabel || "Off";
                 scope.knobLabel = scope.knobLabel || "\u00a0";
                 scope.trueValue = scope.trueValue || true;
                 scope.falseValue = scope.falseValue || false;
+
+                // Add class to outer element (no replace)
+                $element.addClass('co-toggle');
 
                 var longest = [
                         scope.onLabel, scope.knobLabel, scope.offLabel
@@ -61,8 +63,7 @@
 
     .directive('iosToggle', function () {
         return {
-            template: '<div class="ios-toggle" ng-click="toggle()" ng-class="{coActive: model === trueValue, disabled: disabled}"></div>',
-            replace: true,
+            template: '<div ng-click="toggle()" ng-class="{coActive: model === trueValue, disabled: disabled}"></div>',
             restrict: 'EA',
             controller: toggle,
             scope: {
@@ -72,9 +73,12 @@
                 falseValue: '=?',
                 onChange: '&'
             },
-            link: function ($scope, $element) {
+            link: function (scope, $element) {
                 scope.trueValue = scope.trueValue || true;
                 scope.falseValue = scope.falseValue || false;
+
+                // Add class to outer element (no replace)
+                $element.addClass('ios-toggle');
             }
         };
     });

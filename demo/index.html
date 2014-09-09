@@ -10,17 +10,17 @@
     <body ng-app="ng">
 
         <div>
-        Defaults: <input toggle-switch type="checkbox" />
+        Defaults: <div toggle-switch></div>
         </div>
         
         <div>
-            Long label support: <input toggle-switch type="checkbox" on-label="'On supporting long labels'" off-label="'Off'" />
+            Long label support: <div toggle-switch on-label="'On supporting long labels'" off-label="'Off'"></div>
         </div>
         <div style="font-size: 3em;">
-            Font size: <input toggle-switch type="checkbox" on-label="'On'" off-label="'Off'" />
+            Font size: <div toggle-switch on-label="'On'" off-label="'Off'"></div>
         </div>
         <div>
-            Alternative values: <input toggle-switch type="checkbox" model="value" true-value="'Wooo!'" false-value="'Booo!'" />
+            Alternative values: <div toggle-switch model="value" true-value="'Wooo!'" false-value="'Booo!'"></div>
             The value is: {{value}}
         </div>
 

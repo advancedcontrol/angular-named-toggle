@@ -1,6 +1,11 @@
 /* line 11, ../angular-named-toggle.scss */
 .co-toggle {
   display: inline-block;
+  vertical-align: middle;
+}
+/* line 15, ../angular-named-toggle.scss */
+.co-toggle > div {
+  display: inline-block;
   overflow: hidden;
   position: relative;
   min-width: 100px;
@@ -16,44 +21,44 @@
   -o-user-select: none;
   user-select: none;
 }
-/* line 34, ../angular-named-toggle.scss */
-.co-toggle > span.switch-min {
+/* line 38, ../angular-named-toggle.scss */
+.co-toggle > div > span.switch-min {
   height: 0;
   margin: 0;
   padding: 0;
   border: 0;
 }
-/* line 41, ../angular-named-toggle.scss */
-.co-toggle.disabled {
+/* line 45, ../angular-named-toggle.scss */
+.co-toggle > div.disabled {
   opacity: 0.5;
   filter: alpha(opacity=50);
   cursor: default !important;
 }
-/* line 48, ../angular-named-toggle.scss */
-.co-toggle.disabled .switch-left,
-.co-toggle.disabled .switch-right,
-.co-toggle.disabled .knob {
+/* line 52, ../angular-named-toggle.scss */
+.co-toggle > div.disabled .switch-left,
+.co-toggle > div.disabled .switch-right,
+.co-toggle > div.disabled .knob {
   cursor: default !important;
 }
-/* line 53, ../angular-named-toggle.scss */
-.co-toggle > div {
+/* line 57, ../angular-named-toggle.scss */
+.co-toggle > div > div {
   position: relative;
   width: 150%;
   left: -50%;
 }
-/* line 60, ../angular-named-toggle.scss */
-.co-toggle > div.coActive {
+/* line 64, ../angular-named-toggle.scss */
+.co-toggle > div > div.coActive {
   left: 0%;
 }
-/* line 64, ../angular-named-toggle.scss */
-.co-toggle > div.switch-animate {
+/* line 68, ../angular-named-toggle.scss */
+.co-toggle > div > div.switch-animate {
   transition: left 0.2s;
   -o-transition: left 0.2s;
   -moz-transition: left 0.2s;
   -webkit-transition: left 0.2s;
 }
-/* line 72, ../angular-named-toggle.scss */
-.co-toggle span {
+/* line 76, ../angular-named-toggle.scss */
+.co-toggle > div span {
   display: inline-block;
   width: 33%;
   height: 100%;
@@ -67,8 +72,8 @@
   text-align: center;
   white-space: nowrap;
 }
-/* line 87, ../angular-named-toggle.scss */
-.co-toggle span.knob {
+/* line 91, ../angular-named-toggle.scss */
+.co-toggle > div span.knob {
   margin-top: -1px;
   margin-bottom: -1px;
   border-left: 1px solid lightgrey;
@@ -79,23 +84,28 @@
   z-index: 100;
   text-align: center;
 }
-/* line 103, ../angular-named-toggle.scss */
-.co-toggle span.switch-left, .co-toggle span.switch-right {
+/* line 107, ../angular-named-toggle.scss */
+.co-toggle > div span.switch-left, .co-toggle > div span.switch-right {
   z-index: 1;
 }
-/* line 107, ../angular-named-toggle.scss */
-.co-toggle span.switch-left {
+/* line 111, ../angular-named-toggle.scss */
+.co-toggle > div span.switch-left {
   color: white;
   background: #53d76a;
 }
-/* line 112, ../angular-named-toggle.scss */
-.co-toggle span.switch-right {
+/* line 116, ../angular-named-toggle.scss */
+.co-toggle > div span.switch-right {
   color: black;
   background: #eeeeee;
 }
 
 /* line 7, ../ios-toggle.scss */
-div.ios-toggle {
+.ios-toggle {
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 11, ../ios-toggle.scss */
+.ios-toggle > div {
   margin: 0;
   padding: 0;
   border: none;
@@ -121,8 +131,8 @@ div.ios-toggle {
   -o-transition: border 0.25s 0.15s, box-shadow 0.25s 0.3s, padding 0.25s;
   transition: border 0.25s 0.15s, box-shadow 0.25s 0.3s, padding 0.25s;
 }
-/* line 32, ../ios-toggle.scss */
-div.ios-toggle:after {
+/* line 36, ../ios-toggle.scss */
+.ios-toggle > div:after {
   content: '';
   display: block;
   height: 33px;
@@ -146,8 +156,8 @@ div.ios-toggle:after {
   -o-transition: border 0.25s 0.15s, left 0.25s 0.1s, right 0.15s 0.175s;
   transition: border 0.25s 0.15s, left 0.25s 0.1s, right 0.15s 0.175s;
 }
-/* line 55, ../ios-toggle.scss */
-div.ios-toggle.coActive {
+/* line 59, ../ios-toggle.scss */
+.ios-toggle > div.coActive {
   border-color: #53d76a;
   -webkit-box-shadow: inset 0 0 0 18.5px #53d76a;
   -moz-box-shadow: inset 0 0 0 18.5px #53d76a;
@@ -158,8 +168,8 @@ div.ios-toggle.coActive {
   -o-transition: border 0.25s, box-shadow 0.25s, padding 0.25s 0.15s;
   transition: border 0.25s, box-shadow 0.25s, padding 0.25s 0.15s;
 }
-/* line 63, ../ios-toggle.scss */
-div.ios-toggle.coActive:after {
+/* line 67, ../ios-toggle.scss */
+.ios-toggle > div.coActive:after {
   border-color: #53d76a;
   left: 22.23077px;
   right: 0;
