@@ -1,5 +1,15 @@
 (function (angular) {
     'use strict';
+    
+    
+    // Use existing module otherwise create a new one
+    var module;
+    try {
+        module = angular.module('coUtils');
+    } catch (e) {
+        module = angular.module('coUtils', []);
+    }
+    
 
     // Reference code:
     // https://github.com/nostalgiaz/bootstrap-switch
@@ -18,7 +28,7 @@
             };
         };
 
-    angular.module('ng')
+    module
     .directive('toggleSwitch', function () {
         return {
             restrict: 'EA',
