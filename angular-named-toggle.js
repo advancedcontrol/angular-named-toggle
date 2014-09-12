@@ -91,6 +91,32 @@
                 $element.addClass('ios-toggle');
             }
         };
+    })
+
+    // Requires the images to be defined in CSS
+    .directive('imageToggle', function () {
+        return {
+            template: 
+                '<div ng-click="toggle()" ' +
+                    'ng-class="{trueImg: model === trueValue, disabled: disabled}"' +
+                '></div>',
+            restrict: 'EA',
+            controller: toggle,
+            scope: {
+                model: '=?',
+                disabled: '=?',
+                trueValue: '=?',
+                falseValue: '=?',
+                onChange: '&'
+            },
+            link: function (scope, $element) {
+                scope.trueValue = scope.trueValue || true;
+                scope.falseValue = scope.falseValue || false;
+
+                // Add class to outer element (no replace)
+                $element.addClass('image-toggle');
+            }
+        };
     });
 
 }(this.angular));
