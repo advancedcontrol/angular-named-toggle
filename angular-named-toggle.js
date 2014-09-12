@@ -15,7 +15,7 @@
     // https://github.com/nostalgiaz/bootstrap-switch
     // https://github.com/cgarvis/angular-toggle-switch
 
-    var toggle = function ($scope) {
+    var toggle = ['$scope', function ($scope) {
             $scope.toggle = function toggle() {
                 if (!$scope.disabled) {
                     if ($scope.model === $scope.trueValue) {
@@ -26,7 +26,7 @@
                 }
                 $scope.onChange();
             };
-        };
+        }];
 
     module
     .directive('toggleSwitch', function () {
