@@ -56,8 +56,8 @@
                 scope.onLabel = scope.onLabel || "On";
                 scope.offLabel = scope.offLabel || "Off";
                 scope.knobLabel = scope.knobLabel || "\u00a0";
-                scope.trueValue = scope.trueValue || true;
-                scope.falseValue = scope.falseValue || false;
+                scope.trueValue = scope.trueValue === undefined ? true : scope.trueValue;
+                scope.falseValue = scope.falseValue === undefined ? false : scope.falseValue;
 
                 // Add class to outer element (no replace)
                 $element.addClass('co-toggle');
@@ -84,8 +84,8 @@
                 onChange: '&'
             },
             link: function (scope, $element) {
-                scope.trueValue = scope.trueValue || true;
-                scope.falseValue = scope.falseValue || false;
+                scope.trueValue = scope.trueValue === undefined ? true : scope.trueValue;
+                scope.falseValue = scope.falseValue === undefined ? false : scope.falseValue;
 
                 // Add class to outer element (no replace)
                 $element.addClass('ios-toggle');
@@ -110,8 +110,8 @@
                 onChange: '&'
             },
             link: function (scope, $element) {
-                scope.trueValue = scope.trueValue || true;
-                scope.falseValue = scope.falseValue || false;
+                scope.trueValue = scope.trueValue === undefined ? true : scope.trueValue;
+                scope.falseValue = scope.falseValue === undefined ? false : scope.falseValue;
 
                 // Add class to outer element (no replace)
                 $element.addClass('image-toggle');
